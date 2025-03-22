@@ -136,7 +136,8 @@ curl -X POST http://127.0.0.1:8000/api/ml/predict/engine/ \
 
 🚀 Next Steps
 
-✅ Backend is ready! 
+✅ Backend is ready!
+   Android application frontend @ https://github.com/BudraHH/AutoIntell_AUI (Vehicle dashboard application)
 
 
 👨‍💻 Contributor: Hari Hara Budra - Lead Developer 🚀
