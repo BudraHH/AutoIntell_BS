@@ -10,12 +10,12 @@ from tensorflow.keras.metrics import MeanSquaredError
 def predict_coolant_change(coolant_temp, coolant_pressure, engine_rpm, lub_oil_temp, lub_oil_pressure, fuel_pressure):
     # Load trained LSTM model with custom objects (if mse is a custom metric)
     lstm_model = tf.keras.models.load_model(
-        "../model_weights/pred_coolantChange.h5",
+        "ml_models/model_weights/pred_coolantChange.h5",
         custom_objects={'mse': MeanSquaredError()}  # Adjust if mse is custom
     )
 
     # Load scaler
-    scaler = joblib.load("../model_weights/scaler_coolant.pkl")
+    scaler = joblib.load("ml_models/model_weights/scaler_coolant.pkl")
     # Create feature array
     input_features = np.array([[coolant_temp, coolant_pressure, engine_rpm, lub_oil_temp, lub_oil_pressure, fuel_pressure]])
 

@@ -10,14 +10,12 @@ from django.contrib.auth import authenticate
 @api_view(['POST'])
 def register_user(request):
 
-    first_name = request.data.get('first_name','')
-    last_name = request.data.get('last_name','')
-    username = first_name + last_name
+    username = request.data['username']
     email = request.data.get('email')
     password = request.data.get('password')
 
-    if not username or not password:
-        return Response({'error': 'Couldn\'t generate username. First name is required. Second name is optional, to generate username'}, status=status.HTTP_400_BAD_REQUEST)
+    if not username :
+        return Response({'error': 'Username is required. '}, status=status.HTTP_400_BAD_REQUEST)
 
     if not email:
         return Response({'error': 'E-mail is required'}, status=status.HTTP_400_BAD_REQUEST)

@@ -3,7 +3,7 @@ from data_preprocessing import load_and_preprocess_data
 from model_lstm import create_lstm_model
 
 # Load data
-X_train, X_test, y_train, y_test, scaler = load_and_preprocess_data('../datasets/engine_dataset.csv')
+X_train, X_test, y_train, y_test, scaler = load_and_preprocess_data('ml_models/datasets/engine_dataset.csv')
 
 # Define model
 model = create_lstm_model(input_shape=(X_train.shape[1], 1))
