@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'AutoIntell.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', 'autointell_db'),
-        'USER': os.environ.get('DB_USER', 'autointell_user'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'autointell_password'),
+        'NAME': os.environ.get('DB_NAME', 'Autointell_bs'),
+        'USER': os.environ.get('DB_USER', 'postgres'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'Mouli'),
         'HOST': os.environ.get('DB_HOST', 'localhost'),
         'PORT': os.environ.get('DB_PORT', '5432'),
     }

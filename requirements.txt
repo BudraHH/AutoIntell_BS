@@ -6,3 +6,6 @@ tensorflow
 xgboost
 python-dotenv
 scikit-learn
+django-cors-headers
+keras
+pandas

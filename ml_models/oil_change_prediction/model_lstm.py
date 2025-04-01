@@ -1,14 +1,14 @@
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense
+from keras import Sequential , layers
+# from keras.layers import LSTM, Dense
 
 
 def create_lstm_model(input_shape):
     model = Sequential([
-        LSTM(50, return_sequences=True, input_shape=input_shape),
-        LSTM(50, return_sequences=False),
-        Dense(25, activation='relu'),
-        Dense(1)  # Output layer for regression
+        layers.LSTM(50, return_sequences=True, input_shape=input_shape),
+        layers.LSTM(50, return_sequences=False),
+        layers.Dense(25, activation='relu'),
+        layers.Dense(1)  # Output layer for regression
     ])
 
     # Compile model
